@@ -1,1 +1,46 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --background-image: 
+    repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(#e7e7e7 0.01vh, #1a1a1a);
+
+    --accent-color: #000;
+    --font-color: #000;
+    --font-color-animation: #fff;
+    --disabled-menu-color: rgba(0, 0, 0, 0.6);
+    --background-color: #fff;
+    --head-foot-text: PressStart2P-Regular, sans-serif;
+    --main-text: Inter-Variable, sans-serif;
+
+    --h1-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --h1-line-height: 65px;
+
+    --h2-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --h2-line-height: 23px;
+    
+    --text-button-size: 14px;
+    --text-button-line-height: 14px;
+
+    --lable-size: 14px;
+    --lable-weight: 400;
+    --lable-line-height: 14px;
+
+    --h1-h2-button-weight: 400;
+
+    --title-size: 18px;
+    --title-weight: 700;
+    --title-line-height: 21.78px;
+
+    --font-size: 18px;
+    --font-weight: 400;
+    --font-line-height: 21px;
+
+    --footer-like-font-size: 14px;
+    --footer-like-font-weight: 400;
+    --footer-like-font-line-height: 12.6px;
+    
+    --color-heart-liked: #FF0000;
+    --color-heart: #000;
+}
