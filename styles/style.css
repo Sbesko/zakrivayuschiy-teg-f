@@ -306,7 +306,6 @@ dialog::backdrop {
   grid-template-rows: repeat(2, min-content);
   justify-items: center;
   align-items: center;
- 
 }
 
 .popup-text {
