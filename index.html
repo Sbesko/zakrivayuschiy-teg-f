@@ -520,43 +520,43 @@
         </div>
       </section>
       <section class="memory-box">
-      <button
-        class="button-memory"
-        type="button"
-        onclick="window['insert-floppy'].showModal()"
-        aria-controls="insert-floppy"
-      >
-        <svg
-          class="floppy-icon-button"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 39 39"
-          width="39"
-          height="39"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button-text-memory"> Сохранить на память </span>
-      </button>
-
-      <dialog class="dialog-window" id="insert-floppy">
-        <svg
-          class="floppy-icon-popup"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 39 39"
-          width="39"
-          height="39"
-        >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <h4 class="popup-text">Вставьте дискету, чтобы продолжить</h4>
-
         <button
+          class="button-memory"
           type="button"
-          onclick="window['insert-floppy'].close()"
-          class="button_OK"
+          onclick="window['insert-floppy'].showModal()"
+          aria-controls="insert-floppy"
         >
-          <span class="button__text_OK">ОК</span>
+          <svg
+            class="floppy-icon-button"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 39 39"
+            width="39"
+            height="39"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button-text-memory"> Сохранить на память </span>
         </button>
+
+        <dialog class="dialog-window" id="insert-floppy">
+          <svg
+            class="floppy-icon-popup"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 39 39"
+            width="39"
+            height="39"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <h4 class="popup-text">Вставьте дискету, чтобы продолжить</h4>
+
+          <button
+            type="button"
+            onclick="window['insert-floppy'].close()"
+            class="button_OK"
+          >
+            <span class="button__text_OK">ОК</span>
+          </button>
         </dialog>
       </section>
     </main>
