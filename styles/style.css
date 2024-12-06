@@ -218,7 +218,7 @@
   border: solid var(--accent-color) 2px;
 }
 
-.button:focus-visible {
+.button:focus {
   outline: none;
 }
 
@@ -265,7 +265,7 @@
   z-index: 2;
 }
 
-.card__icon-button:focus-visible {
+.card__icon-button:focus {
   outline: none;
 }
 
