@@ -11,14 +11,14 @@
     --font-color-animation: #fff;
     --disabled-menu-color: rgba(0, 0, 0, 0.6);
     --background-color: #fff;
-    --head-foot-text: PressStart2P-Regular, sans-serif;
+    --head-foot-text: PressStart2P, sans-serif;
     --main-text: Inter-Variable, sans-serif;
 
-    --h1-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-    --h1-line-height: 65px;
+    --header-title-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --header-title-line-height: 65px;
 
-    --h2-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-    --h2-line-height: 23px;
+    --header-subtitle-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --header-subtitle-line-height: 23px;
     
     --text-button-size: 14px;
     --text-button-line-height: 14px;
@@ -27,7 +27,7 @@
     --lable-weight: 400;
     --lable-line-height: 14px;
 
-    --h1-h2-button-weight: 400;
+    --header-weight: 400;
 
     --title-size: 18px;
     --title-weight: 700;

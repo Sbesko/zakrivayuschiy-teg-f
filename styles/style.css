@@ -19,6 +19,7 @@
   color: var(--font-color);
   background-color: var(--background-color);
   background-image: var(--background-image);
+  background-attachment: fixed;
   background-size: cover;
 }
 
@@ -28,25 +29,25 @@
   justify-content: end;
   align-items: center;
   width: 100%;
-  min-height: 368px;
+  padding-top: 136px;
   border: solid 2px var(--accent-color);
   margin: 100px 0;
-  font-family: PressStart2P-Regular, sans-serif;
+  font-family: PressStart2P, sans-serif;
   background-color: var(--background-color);
 }
 
 .header__title {
-  font-size: var(--h1-size);
-  line-height: var(--h1-line-height);
-  font-weight: var(--h1-h2-button-weight);
+  font-size: var(--header-title-size);
+  line-height: var(--header-title-line-height);
+  font-weight: var(--header-weight);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .header__subtitle-text {
-  font-size: var(--h2-size);
-  line-height: var(--h2-line-height);
-  font-weight: var(--h1-h2-button-weight);
+  font-size: var(--header-subtitle-size);
+  line-height: var(--header-subtitle-line-height);
+  font-weight: var(--header-weight);
   text-transform: uppercase;
   margin-bottom: 25px;
 }
@@ -67,10 +68,10 @@
   background-color: transparent;
   font-size: var(--text-button-size);
   line-height: var(--text-button-line-height);
-  font-weight: var(--h1-h2-button-weight);
+  font-weight: var(--header-weight);
   text-transform: uppercase;
-  top: 2px;
-  left: 2px;
+  transition: 0.3s;
+  animation-timing-function: ease;
 }
 
 .theme-menu__list {
@@ -80,8 +81,6 @@
 .theme-menu__button:hover {
   color: var(--disabled-menu-color);
   cursor: pointer;
-  transition: color 0.3s;
-  animation-timing-function: ease;
 }
 
 .theme-menu__button:focus {
@@ -105,8 +104,6 @@
 .theme-menu__button:disabled {
   color: var(--disabled-menu-color);
   pointer-events: none;
-  transition: color 0.3s;
-  animation-timing-function: ease;
 }
 
 .theme-menu__button:disabled::before {
@@ -136,6 +133,7 @@
   font-variation-settings: "wght" var(--title-weight);
   align-self: self-start;
   margin: 5px 10px;
+  max-width: 662px;
 }
 
 .image-box {
@@ -180,21 +178,21 @@
 }
 
 .section__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
   font-size: var(--font-size);
   line-height: var(--font-line-height);
   font-variation-settings: "wght" var(--font-weight);
-  padding: 22px 25px 25px 25px;
+  padding: 24px 25px 25px 25px;
   width: 100%;
-}
-
-.section__text-margin {
-  margin-bottom: 27px;
 }
 
 .like-box {
   display: flex;
   align-self: end;
   margin: 0 22px 22px 0;
+  gap: 9px;
 }
 
 .card__icon-button {
@@ -202,12 +200,15 @@
   padding: 0px;
   border: 0px;
   background-color: transparent;
-  margin-right: 9px;
+  transition: 0.3s ease;
 }
 
 .like-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 39px;
-  min-height: 36px;
+  min-height: 38px;
 }
 
 .card__like-button {
@@ -217,33 +218,44 @@
   border: solid var(--accent-color) 2px;
 }
 
-.like-button:focus-visible {
-  outline: 0;
-  box-shadow: 2px 2px 0 0 var(--accent-color);
-  transition: 0.3s;
+.button:focus-visible {
+  outline: none;
 }
 
-.like-button {
+.button:focus-visible {
+  outline: 0;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.button {
   position: relative;
   overflow: hidden;
   background-color: var(--background-color);
+  transition: 0.3s;
 }
 
-.like-button::before {
+.button::before {
   position: absolute;
   content: "";
   inset: 0;
   background-color: var(--accent-color);
-  transition: translate 0.5s, ease-in-out forwards;
+  transition: translate 0.5s ease-in-out;
   translate: -100%;
 }
 
-.like-button:hover::before {
+.button:hover::before {
   translate: 0%;
 }
 
+.button-like {
+  color: var(--font-color-animation);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
 .button__text {
-  font-family: PressStart2P-Regular, sans-serif;
+  font-family: PressStart2P, sans-serif;
   font-size: var(--footer-like-font-size);
   line-height: var(--footer-like-font-height);
   font-weight: var(--footer-like-font-line-weight);
@@ -254,9 +266,12 @@
 }
 
 .card__icon-button:focus-visible {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
   outline: 0;
   border: solid 2px var(--accent-color);
-  transition: 0.3s ease;
 }
 
 .sparks {
@@ -282,22 +297,13 @@
   cursor: pointer;
 }
 
-.button-text-memory {
-  font-family: PressStart2P-Regular, sans-serif;
-  font-size: var(--footer-like-font-size);
-  line-height: var(--footer-like-font-height);
-  font-weight: var(--footer-like-font-line-weight);
-}
-
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog-window {
   block-size: border-box;
-  width: 357px;
-  min-height: 193px;
+  max-width: 357px;
   background-color: var(--background-color);
   border: 2px solid var(--accent-color);
   color: var(--font-color);
@@ -319,11 +325,11 @@ dialog::backdrop {
   text-transform: uppercase;
   font-size: var(--footer-like-font-size);
   line-height: var(--font-line-height);
-  font-weight: var(--h1-h2-button-weight);
+  font-weight: var(--header-weight);
   margin-bottom: 30px;
 }
 
-.button_OK {
+.button_ok {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -334,10 +340,6 @@ dialog::backdrop {
   background-color: inherit;
   border: 2px solid var(--accent-color);
   cursor: pointer;
-}
-
-.button__text_OK {
-  text-transform: uppercase;
 }
 
 .floppy-icon-button {
@@ -390,7 +392,7 @@ dialog::backdrop {
 @media (width <= 375px) {
   .header {
     width: 100%;
-    min-height: 327px;
+    padding-top: 113px;
   }
 
   .header__title {
@@ -401,8 +403,16 @@ dialog::backdrop {
     margin-bottom: 15px;
   }
 
+  .section__title {
+    max-width: 351px;
+  }
+
   .sections__main-rules {
     margin-bottom: 49px;
+  }
+
+  .lable {
+    right: 11px;
   }
 
   .button-memory {
@@ -416,5 +426,18 @@ dialog::backdrop {
     margin-right: 0px;
     margin-bottom: 5px;
     max-width: 28px;
+  }
+
+  .dialog-window {
+    max-width: 345px;
+    padding: 30px 42px;
+  }
+
+  .button_ok {
+    width: 257px;
+  }
+
+  .popup-text {
+    width: 198px;
   }
 }
