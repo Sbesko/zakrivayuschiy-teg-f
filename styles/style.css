@@ -151,17 +151,6 @@
   width: 100%;
 }
 
-@supports (
-  (text-stroke: 1px var(--background-color)) or
-    (-webkit-text-stroke: 1px var(--background-color))
-) {
-  .lable {
-    -webkit-text-stroke: 1px var(--background-color);
-    text-stroke: 1px var(--background-color);
-    text-shadow: none;
-  }
-}
-
 .lable {
   font-family: var(--head-foot-text);
   font-size: var(--lable-size);
@@ -175,6 +164,17 @@
   opacity: 0.5;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
     1px 0 var(--background-color), 0 -1px var(--background-color);
+}
+
+@supports (
+  (text-stroke: 1px var(--background-color)) or
+    (-webkit-text-stroke: 1px var(--background-color))
+) {
+  .lable {
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
+  }
 }
 
 .section__text-block {
@@ -340,6 +340,7 @@ dialog::backdrop {
   background-color: inherit;
   border: 2px solid var(--accent-color);
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .floppy-icon-button {
